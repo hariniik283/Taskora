@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 42px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.app-header p {
+  color: #555;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+/* Task Form */
+.task-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.task-form input,
+.task-form select,
+.task-form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+.task-form input:focus,
+.task-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.task-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-form button:hover {
+  background: #1d4ed8;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filter-btn {
+  padding: 10px 14px;
+  border: none;
+  background: #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* Task List */
+.task-list-section {
+  min-height: 220px;
+}
+
+#taskList {
+  list-style: none;
+}
+
+#taskList li {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+}
+
+/* Stats */
+.stats {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .task-form {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

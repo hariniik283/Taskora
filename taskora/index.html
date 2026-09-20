@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskora | Smart Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1>Taskora</h1>
+	<p> Helloo... 
+	"Let’s make today productive."</p>
+        <p>Stay organized. Get things done.</p>
+        <button id="themeToggle">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Task Form -->
+    <section class="task-form">
+
+      <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Enter a new task..."
+      />
+
+      <select id="categorySelect">
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Study">Study</option>
+        <option value="Health">Health</option>
+      </select>
+
+      <input type="date" id="dueDateInput" />
+
+      <button id="addTaskBtn">Add Task</button>
+
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="filters">
+
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+      <button class="filter-btn" data-filter="Personal">Personal</button>
+      <button class="filter-btn" data-filter="Work">Work</button>
+      <button class="filter-btn" data-filter="Study">Study</button>
+      <button class="filter-btn" data-filter="Health">Health</button>
+
+    </section>
+
+    <!-- Task List -->
+    <section class="task-list-section">
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+
+      <div>Total: <span id="totalTasks">0</span></div>
+      <div>Completed: <span id="completedTasks">0</span></div>
+      <div>Pending: <span id="pendingTasks">0</span></div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
